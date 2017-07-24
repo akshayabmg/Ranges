@@ -14,17 +14,17 @@ public class MinRange {
 //		Ranges b = new Ranges(94200,94299);
 //		Ranges c = new Ranges(94277,94699);
 		
-		Ranges a = new Ranges(20, 25);
-		Ranges b = new Ranges(15, 50);
-		Ranges c = new Ranges(8, 12);
-		Ranges d = new Ranges(21, 67);
-		Ranges e = new Ranges(63, 65);
+		Ranges x = new Ranges(20, 25);
+		Ranges y = new Ranges(15, 50);
+		Ranges z = new Ranges(8, 12);
+		Ranges l = new Ranges(21, 67);
+		Ranges m = new Ranges(63, 65);
 		
-		MinRange.AddToRange(a);
-		MinRange.AddToRange(b);
-		MinRange.AddToRange(c);
-		MinRange.AddToRange(d);
-		MinRange.AddToRange(e);
+		MinRange.AddToRange(x);
+		MinRange.AddToRange(y);
+		MinRange.AddToRange(z);
+		MinRange.AddToRange(l);
+		MinRange.AddToRange(m);
 		
 		showRanges() ;
 		

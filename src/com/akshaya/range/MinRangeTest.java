@@ -34,22 +34,22 @@ public class MinRangeTest {
 	public void MinRangetestWithTestData1() {
 		setUp();
 		//test data taken from the question 
-		Ranges a = new Ranges(94133, 94133);
-		Ranges b = new Ranges(94200, 94299);
-		Ranges c = new Ranges(94600, 94699);
+		Ranges x = new Ranges(94133, 94133);
+		Ranges y = new Ranges(94200, 94299);
+		Ranges z = new Ranges(94600, 94699);
 		
-		MinRange.AddToRange(a);
-		MinRange.AddToRange(b);
-		MinRange.AddToRange(c);
+		MinRange.AddToRange(x);
+		MinRange.AddToRange(y);
+		MinRange.AddToRange(z);
 		
 		Assert.assertEquals("size matching failure", 3, MinRange.size());
 		
-		Ranges e = new Ranges(94133, 94133);
-		Ranges f = new Ranges(94200, 94299);
-		Ranges g = new Ranges(94600, 94699);
-		expectedOutputs.add(e);
-		expectedOutputs.add(f);
-		expectedOutputs.add(g);
+		Ranges l = new Ranges(94133, 94133);
+		Ranges m = new Ranges(94200, 94299);
+		Ranges n = new Ranges(94600, 94699);
+		expectedOutputs.add(l);
+		expectedOutputs.add(m);
+		expectedOutputs.add(n);
 		Assert.assertEquals("content matching failure", expectedOutputs, MinRange.getMinRanges());
 		
 		//expected output is same as that of input 
@@ -65,22 +65,22 @@ public class MinRangeTest {
 		
 		//data taken from question 
 		
-		Ranges a = new Ranges(94133, 94133);
-		Ranges b = new Ranges(94200, 94299);
-		Ranges c = new Ranges(94226, 94399);
+		Ranges x = new Ranges(94133, 94133);
+		Ranges y = new Ranges(94200, 94299);
+		Ranges z = new Ranges(94226, 94399);
 		
-		MinRange.AddToRange(a);
-		MinRange.AddToRange(b);
-		MinRange.AddToRange(c);
+		MinRange.AddToRange(x);
+		MinRange.AddToRange(y);
+		MinRange.AddToRange(z);
 		
 		Assert.assertEquals("size matching failure", 2, MinRange.size());
 		
 		
-		Ranges e = new Ranges(94133, 94133);
-		Ranges f = new Ranges(94200, 94399);
+		Ranges l = new Ranges(94133, 94133);
+		Ranges m = new Ranges(94200, 94399);
 		
-		expectedOutputs.add(e);
-		expectedOutputs.add(f);
+		expectedOutputs.add(l);
+		expectedOutputs.add(m);
 		
 		
 		Assert.assertEquals("content matching failure", expectedOutputs, MinRange.getMinRanges());

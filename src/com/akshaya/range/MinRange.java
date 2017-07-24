@@ -34,32 +34,33 @@ public class MinRange {
 		if(ranges_List.size()==0)
 			ranges_List.add(toAdd);
 		else {
-			//Add new Ranges, if the range overlaps with existing range, merge them
+			//adding new ranges
+			//Merge if the range overlaps with existing range
 			ListIterator<Ranges> iter = ranges_List.listIterator();
 			boolean add = true; //flag
 			while( iter.hasNext()) {
 				Ranges ranges = iter.next();	
-				//new range within existing range, no need to add
+				//Don't add if new range overlaps with the existing
 				if(ranges.getLow()<=toAdd.getLow() && ranges.getUp()>=toAdd.getUp()) {
 					add = false;
 				}
-				//new range is out of existing range, add it
+				//New range is not present in existing range so add it
 				else if(ranges.getLow()>toAdd.getUp() || ranges.getUp()<toAdd.getLow()) {
 					add = true;
 				}
-				//Ranges overlaps, remove existing, update toAdd
+				//Remove the existing range and update toAdd since there is an overlap
 				else {
 					if(ranges.getLow()<toAdd.getLow())
 						toAdd.setLow(ranges.getLow());
 					if(ranges.getUp()>toAdd.getUp())
-						toAdd.setup(ranges.getUp());
+						toAdd.SetUp(ranges.getUp());
 					iter.remove();
 					add = true;
 				}
-			}//end of while
+			}
 			if(add)
 				ranges_List.add(toAdd);
-		}//end of else
+		}
 		
    }
 	

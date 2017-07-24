@@ -105,7 +105,7 @@ public class MinRangeTest {
 		expectedOutputs.add(e);
 		expectedOutputs.add(f);
 		
-		Assert.assertEquals("failure - expected result content match", expectedOutputs, MinRange.getMinRanges();
+		Assert.assertEquals("failure - expected result content match", expectedOutputs, MinRange.getMinRanges());
 		
 		tearDown();
 		
